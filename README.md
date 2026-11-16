@@ -3,11 +3,7 @@
 **Connect Gmail to Claude Code when the official connector is blocked by your organization.**
 Uses your own Google Cloud OAuth client and a local MCP server, so it doesn't depend on anyone else's approval.
 
-```
-Claude Code ──stdio──▶ gmail-mcp (local, pinned v1.1.11) ──OAuth──▶ Gmail API
-                                │
-                                └── ~/.gmail-mcp/  (client keys + refresh token, chmod 600)
-```
+![Architecture: Claude Code → local gmail-mcp → Google OAuth → Gmail API, plus setup steps and debugging log](docs/architecture.png)
 
 ## Why this exists
 

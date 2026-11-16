@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606A"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D93025"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FAFAF7"/>
+
+  <!-- title -->
+  <text x="80" y="72" font-size="38" font-weight="700" fill="#1F2328">Gmail × Claude Code, without the official connector</text>
+  <text x="80" y="108" font-size="20" fill="#57606A">Local MCP server + my own Google OAuth client  ·  github.com/xungirl/claude-gmail-mcp</text>
+
+  <!-- blocked route -->
+  <rect x="80" y="140" width="560" height="84" rx="14" fill="#F1F1EE" stroke="#C9CCD1" stroke-dasharray="6 5"/>
+  <text x="104" y="176" font-size="20" font-weight="600" fill="#6E7781">Official route: claude.ai Gmail connector</text>
+  <rect x="104" y="190" width="250" height="24" rx="12" fill="#FCE8E6"/>
+  <text x="118" y="208" font-size="15" font-weight="600" fill="#D93025">✗  disabled by org admin</text>
+  <line x1="640" y1="182" x2="760" y2="182" stroke="#D93025" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#arrRed)"/>
+  <text x="780" y="176" font-size="20" font-weight="600" fill="#1F2328">So I built my own path ↓</text>
+  <text x="780" y="204" font-size="16" fill="#57606A">MCP is an open protocol: any local server works, no approval needed</text>
+
+  <!-- main chain -->
+  <g>
+    <rect x="80" y="290" width="300" height="130" rx="16" fill="#FFFFFF" stroke="#D97757" stroke-width="2.5"/>
+    <rect x="80" y="290" width="300" height="10" rx="5" fill="#D97757"/>
+    <text x="230" y="350" font-size="26" font-weight="700" fill="#1F2328" text-anchor="middle">Claude Code</text>
+    <text x="230" y="382" font-size="16" fill="#57606A" text-anchor="middle">AI coding agent (CLI)</text>
+
+    <rect x="460" y="290" width="300" height="130" rx="16" fill="#FFFFFF" stroke="#1F2328" stroke-width="2.5"/>
+    <rect x="460" y="290" width="300" height="10" rx="5" fill="#1F2328"/>
+    <text x="610" y="350" font-size="26" font-weight="700" fill="#1F2328" text-anchor="middle">gmail-mcp</text>
+    <text x="610" y="382" font-size="16" fill="#57606A" text-anchor="middle">local MCP server · pinned v1.1.11</text>
+
+    <rect x="840" y="290" width="300" height="130" rx="16" fill="#FFFFFF" stroke="#1A73E8" stroke-width="2.5"/>
+    <rect x="840" y="290" width="300" height="10" rx="5" fill="#1A73E8"/>
+    <text x="990" y="350" font-size="26" font-weight="700" fill="#1F2328" text-anchor="middle">Google OAuth 2.0</text>
+    <text x="990" y="382" font-size="16" fill="#57606A" text-anchor="middle">my own Desktop-app client</text>
+
+    <rect x="1220" y="290" width="300" height="130" rx="16" fill="#FFFFFF" stroke="#188038" stroke-width="2.5"/>
+    <rect x="1220" y="290" width="300" height="10" rx="5" fill="#188038"/>
+    <text x="1370" y="350" font-size="26" font-weight="700" fill="#1F2328" text-anchor="middle">Gmail API</text>
+    <text x="1370" y="382" font-size="16" fill="#57606A" text-anchor="middle">search · read · draft · label</text>
+
+    <line x1="380" y1="355" x2="456" y2="355" stroke="#57606A" stroke-width="2.5" marker-end="url(#arr)"/>
+    <text x="420" y="342" font-size="14" fill="#57606A" text-anchor="middle">stdio</text>
+    <line x1="760" y1="355" x2="836" y2="355" stroke="#57606A" stroke-width="2.5" marker-end="url(#arr)"/>
+    <text x="800" y="342" font-size="14" fill="#57606A" text-anchor="middle">token</text>
+    <line x1="1140" y1="355" x2="1216" y2="355" stroke="#57606A" stroke-width="2.5" marker-end="url(#arr)"/>
+    <text x="1180" y="342" font-size="14" fill="#57606A" text-anchor="middle">HTTPS</text>
+  </g>
+
+  <!-- supporting pieces -->
+  <line x1="610" y1="420" x2="610" y2="470" stroke="#8C959F" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="460" y="470" width="300" height="80" rx="12" fill="#FFF8F0" stroke="#E8C9A8"/>
+  <text x="610" y="504" font-size="18" font-weight="600" fill="#1F2328" text-anchor="middle">~/.gmail-mcp/</text>
+  <text x="610" y="530" font-size="15" fill="#57606A" text-anchor="middle">keys + refresh token · chmod 600</text>
+
+  <line x1="990" y1="420" x2="990" y2="470" stroke="#8C959F" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="840" y="470" width="300" height="80" rx="12" fill="#EEF4FD" stroke="#B6CDF2"/>
+  <text x="990" y="504" font-size="18" font-weight="600" fill="#1F2328" text-anchor="middle">Own GCP project</text>
+  <text x="990" y="530" font-size="15" fill="#57606A" text-anchor="middle">Gmail API on · no billing account</text>
+
+  <rect x="80" y="470" width="300" height="80" rx="12" fill="#F3F0FF" stroke="#CFC6F5"/>
+  <text x="230" y="504" font-size="18" font-weight="600" fill="#1F2328" text-anchor="middle">Human in the loop</text>
+  <text x="230" y="530" font-size="15" fill="#57606A" text-anchor="middle">asks before send / delete</text>
+
+  <rect x="1220" y="470" width="300" height="80" rx="12" fill="#EDF7EF" stroke="#B5DCBF"/>
+  <text x="1370" y="504" font-size="18" font-weight="600" fill="#1F2328" text-anchor="middle">Result</text>
+  <text x="1370" y="530" font-size="15" fill="#57606A" text-anchor="middle">1 prompt → inbox summary table</text>
+
+  <!-- setup.sh -->
+  <text x="80" y="620" font-size="22" font-weight="700" fill="#1F2328">./setup.sh: one command, six steps</text>
+  <g font-size="16">
+    <rect x="80"   y="640" width="220" height="70" rx="12" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="100"  y="668" font-weight="700" fill="#D97757">1</text><text x="122" y="668" fill="#1F2328">Create GCP project</text>
+    <text x="100"  y="694" font-size="14" fill="#6E7781">gcloud</text>
+
+    <rect x="324"  y="640" width="220" height="70" rx="12" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="344"  y="668" font-weight="700" fill="#D97757">2</text><text x="366" y="668" fill="#1F2328">Enable Gmail API</text>
+    <text x="344"  y="694" font-size="14" fill="#6E7781">gcloud</text>
+
+    <rect x="568"  y="640" width="220" height="70" rx="12" fill="#FFFBEA" stroke="#E5C96B"/>
+    <text x="588"  y="668" font-weight="700" fill="#D97757">3</text><text x="610" y="668" fill="#1F2328">OAuth client JSON</text>
+    <text x="588"  y="694" font-size="14" fill="#9A6700">manual · script waits</text>
+
+    <rect x="812"  y="640" width="220" height="70" rx="12" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="832"  y="668" font-weight="700" fill="#D97757">4</text><text x="854" y="668" fill="#1F2328">Install pinned pkg</text>
+    <text x="832"  y="694" font-size="14" fill="#6E7781">official npm registry</text>
+
+    <rect x="1056" y="640" width="220" height="70" rx="12" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="1076" y="668" font-weight="700" fill="#D97757">5</text><text x="1098" y="668" fill="#1F2328">claude mcp add</text>
+    <text x="1076" y="694" font-size="14" fill="#6E7781">user scope</text>
+
+    <rect x="1300" y="640" width="220" height="70" rx="12" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="1320" y="668" font-weight="700" fill="#D97757">6</text><text x="1342" y="668" fill="#1F2328">Google sign-in</text>
+    <text x="1320" y="694" font-size="14" fill="#6E7781">localhost:3000 callback</text>
+  </g>
+
+  <!-- debug log -->
+  <text x="80" y="780" font-size="22" font-weight="700" fill="#1F2328">Debugged along the way</text>
+  <g>
+    <rect x="80" y="800" width="466" height="150" rx="14" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="104" y="836" font-size="18" font-weight="700" fill="#D93025">npx hung, zero output</text>
+    <text x="104" y="868" font-size="16" fill="#1F2328">npm debug log → stuck on a</text>
+    <text x="104" y="892" font-size="16" fill="#1F2328">retired registry mirror</text>
+    <text x="104" y="926" font-size="16" font-weight="600" fill="#188038">✓ official registry + global install</text>
+
+    <rect x="567" y="800" width="466" height="150" rx="14" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="591" y="836" font-size="18" font-weight="700" fill="#D93025">Token dies after 7 days</text>
+    <text x="591" y="868" font-size="16" fill="#1F2328">OAuth app in "Testing" status</text>
+    <text x="591" y="892" font-size="16" fill="#1F2328">issues short-lived refresh tokens</text>
+    <text x="591" y="926" font-size="16" font-weight="600" fill="#188038">✓ reauth.sh, or publish the app</text>
+
+    <rect x="1054" y="800" width="466" height="150" rx="14" fill="#FFFFFF" stroke="#C9CCD1"/>
+    <text x="1078" y="836" font-size="18" font-weight="700" fill="#D93025">Server can send &amp; delete mail</text>
+    <text x="1078" y="868" font-size="16" fill="#1F2328">unpinned npx = supply-chain risk</text>
+    <text x="1078" y="892" font-size="16" fill="#1F2328">secrets could leak into git</text>
+    <text x="1078" y="926" font-size="16" font-weight="600" fill="#188038">✓ pinned version · 0600 · .gitignore</text>
+  </g>
+</svg>
