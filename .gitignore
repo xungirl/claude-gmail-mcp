@@ -1,0 +1,3 @@
+# OAuth secrets must never be committed
+*.json
+.DS_Store
