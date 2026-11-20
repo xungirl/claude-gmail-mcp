@@ -1,5 +1,7 @@
 # claude-gmail-mcp
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/xungirl-claude-gmail-mcp-8rv9dh?v=161da32d63b3a9185240f38360bcca55)](https://m8ven.ai/mcp/xungirl-claude-gmail-mcp-8rv9dh?s=readme)
+
 **Connect Gmail to Claude Code when the official connector is blocked by your organization.**
 Uses your own Google Cloud OAuth client and a local MCP server, so it doesn't depend on anyone else's approval.
 
